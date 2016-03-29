@@ -45,24 +45,30 @@
 | the active record class
 */
 
-$active_group = 'desenv';
+define('DB_HOST', getenv('MYSQL_DB_HOST'));
+define('DB_PORT',	getenv('MYSQL_DB_PORT'));
+define('DB_USER',	getenv('MYSQL_DB_USERNAME'));
+define('DB_PASS',	getenv('MYSQL_DB_PASSWORD'));
+define('DB_NAME',	getenv('MYSQL_DB_DATABASE'));
+
+$active_group = 'default';
 $active_record = TRUE;
 
-$db['desenv']['hostname'] = '10.40.10.1';
-$db['desenv']['username'] = 'root';
-$db['desenv']['password'] = 'vsadmin';
-$db['desenv']['database'] = 's2wayapiclient';
-$db['desenv']['dbdriver'] = 'mysql';
-$db['desenv']['dbprefix'] = '';
-$db['desenv']['pconnect'] = TRUE;
-$db['desenv']['db_debug'] = TRUE;
-$db['desenv']['cache_on'] = FALSE;
-$db['desenv']['cachedir'] = '';
-$db['desenv']['char_set'] = 'utf8';
-$db['desenv']['dbcollat'] = 'utf8_general_ci';
-$db['desenv']['swap_pre'] = '';
-$db['desenv']['autoinit'] = TRUE;
-$db['desenv']['stricton'] = FALSE;
+$db['default']['hostname'] = DB_HOST;
+$db['default']['username'] = DB_USER;
+$db['default']['password'] = DB_PASS;
+$db['default']['database'] = DB_NAME;
+$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbprefix'] = '';
+$db['default']['pconnect'] = TRUE;
+$db['default']['db_debug'] = TRUE;
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = '';
+$db['default']['char_set'] = 'utf8';
+$db['default']['dbcollat'] = 'utf8_general_ci';
+$db['default']['swap_pre'] = '';
+$db['default']['autoinit'] = TRUE;
+$db['default']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
