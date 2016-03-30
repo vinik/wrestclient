@@ -1,0 +1,8 @@
+{
+    "name": "vinik/cryptpass",
+    "description": "Encrypt a password",
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "license": "Apache-2.0"
+}
